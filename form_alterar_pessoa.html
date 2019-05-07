@@ -1,13 +1,19 @@
-
-<html lang="pt-br" >
-    <head>
-        <meta charset="utf-8">
-        <title>Alterar pessoa</title>    
-    </head>
-    <body>
-        <form action="/exibir_mensagem">
-                First name: <input type="text" name="FirstName" value="João Pedro"><br>
-                <input type="submit" value="Submit">
-        </form>
-    </body>
-</html>
+< html  lang = " pt-br " >
+    < cabeça >
+        < meta  charset = " utf-8 " >
+        < title > Alterar pessoa </ title >    
+    </ head >
+    < body >
+        < ação do formulário  = / alteração_pessoa >
+                Nome: < tipo de entrada  = " texto " nome = " nome " valor = {{informacoes.nome}} >  
+                < Br >
+                < input  nome = nome_original  value = {{informacoes.nome}}  type = hidden >
+                < button > Alterar </ button >
+            {% if session ["usuario"]%}
+                < A  href = " / logout " > Sair </ a >
+            {%outro%}
+                < A  href = " / form_login " > Entrar </ a >
+            {%fim se%} 
+        </ form >
+    </ body >
+</ html >
