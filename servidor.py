@@ -38,10 +38,10 @@ def alterar_pessoas():
 def exibir_mensagem():
     return render_template("exibir_mensagem.html")
 
-@app.route("/cadastrar_pessoa")
+@app.route("/cadastrar_pessoa", methods = ["POST"])
 def add():
-    endereco = request.args.get("endereco")
-    nome = request.args.get("nome")
+    endereco = request.form["endereco"]
+    nome = request.form["nome"]
     lista = ([Pessoa(nome,endereco,"23454")])
     lista_de_pessoas.append(Pessoa(nome,endereco,"23454"))
     return render_template ("listar_pessoas.html", teste = lista, geral = lista_de_pessoas)
