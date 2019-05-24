@@ -18,8 +18,8 @@ class Caixa():
     def __init__(self, data, hora, produto, itens):
         self.data = data
         self.hora = hora
-        self.produto = produto
-        self.itens = itens
+        self.produto = Produto(self,nome,preco)
+        self.itens = Item(self,produto,qtd)
 
     def calcular_preco(self, preco ,quantidade):
         preco_prod = preco*quantidade
